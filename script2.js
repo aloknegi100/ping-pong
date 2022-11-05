@@ -70,8 +70,8 @@ function barMove() {
     if (barLeft <= 1) {
         barLeft = 1;
     }
-    if (barLeft + bar1.offsetWidth >= window.innerWidth) {
-        barLeft = window.innerWidth - bar1.offsetWidth;
+    if (barLeft + bar1.offsetWidth >= window.innerWidth-20) {
+        barLeft = window.innerWidth - bar1.offsetWidth-20;
     }
     barLeft += barSpeed * barDirection;
     bar1.style.left = barLeft + "px";
@@ -83,7 +83,7 @@ function barMove() {
 function ballMove() {
 
     if (flag == 0) {
-        if (ballLeft >= window.innerWidth - ball.offsetWidth) {
+        if (ballLeft >= window.innerWidth - ball.offsetWidth-10) {
             flag = 1;
         }
         if (flag == 0) {
